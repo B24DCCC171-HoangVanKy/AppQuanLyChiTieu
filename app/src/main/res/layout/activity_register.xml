@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:focusableInTouchMode="true" android:padding="24dp">
+        <TextView style="@style/SectionLabel" android:layout_marginTop="24dp" android:text="@string/account_section" />
+        <TextView style="@style/AppTitle" android:layout_marginTop="8dp" android:text="@string/register_title" />
+        <TextView style="@style/AppSubtitle" android:layout_marginTop="8dp" android:text="@string/register_subtitle" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:orientation="vertical"
+            android:background="@drawable/bg_card" android:padding="20dp">
+            <TextView style="@style/FieldLabel" android:text="@string/username" />
+            <EditText android:id="@+id/etRegisterUsername" style="@style/FormInput"
+                android:autofillHints="newUsername" android:hint="@string/username_hint"
+                android:inputType="text|textNoSuggestions" android:maxLength="30"
+                android:imeOptions="actionNext" android:maxLines="1" />
+            <TextView style="@style/AppSubtitle" android:layout_marginTop="6dp"
+                android:text="@string/username_rule" android:textSize="12sp" />
+            <TextView style="@style/FieldLabel" android:layout_marginTop="18dp" android:text="@string/password" />
+            <EditText android:id="@+id/etRegisterPassword" style="@style/FormInput"
+                android:autofillHints="newPassword" android:hint="@string/password_rule"
+                android:inputType="textPassword" android:maxLength="72"
+                android:imeOptions="actionNext" android:maxLines="1" />
+            <TextView style="@style/FieldLabel" android:layout_marginTop="18dp" android:text="@string/confirm_password" />
+            <EditText android:id="@+id/etConfirmPassword" style="@style/FormInput"
+                android:importantForAutofill="no" android:hint="@string/confirm_password_hint"
+                android:inputType="textPassword" android:maxLength="72"
+                android:imeOptions="actionDone" android:maxLines="1" />
+            <TextView android:id="@+id/tvRegisterError" style="@style/AppSubtitle"
+                android:layout_marginTop="12dp" android:textColor="@color/red_delete"
+                android:accessibilityLiveRegion="polite" android:visibility="gone" />
+            <Button android:id="@+id/btnRegister" style="@style/PrimaryButton"
+                android:layout_marginTop="24dp" android:text="@string/register_title" />
+        </LinearLayout>
+        <Button android:id="@+id/btnBackToLogin" style="@style/TextButton"
+            android:layout_width="match_parent" android:layout_marginTop="16dp" android:text="@string/back_to_login" />
+    </LinearLayout>
+</ScrollView>
